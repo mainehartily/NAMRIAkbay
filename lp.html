@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .top-navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      background-color: #FFD803;
+      color: white;
+    }
+
+    .top-navbar .social-icons {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .top-navbar .social-icons li {
+      margin-left: 15px;
+    }
+
+    .top-navbar .social-icons li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.5em;
+      transition: color 0.3s;
+    }
+
+    .top-navbar .social-icons li a:hover {
+      color: #4CAF50;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      background-color: #444;
+      color: white;
+    }
+
+    .navbar .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2em;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #6EA4C5;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .gif-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 30px;
+    }
+
+    .gif {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .cta-button, .sign-in-button, .search-button, .learn-more-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #6EA4C5;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      margin: 20px 10px 0;
+      position: relative;
+    }
+
+    .cta-button:hover, .sign-in-button:hover, .search-button:hover, .learn-more-button:hover {
+      background-color: #5f93b1;
+    }
+
+    /* New effect-2 styles */
+    .cta-button.effect-2, .sign-in-button.effect-2, .search-button.effect-2, .learn-more-button.effect-2 {
+      transition: all 0.2s linear 0s;
+    }
+
+    .cta-button.effect-2:before, .sign-in-button.effect-2:before, .search-button.effect-2:before, .learn-more-button.effect-2:before {
+      content: "\f0a4";
+      font-family: FontAwesome;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: -30px;
+      width: 30px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 0px 5px 5px 0px;
+      transition: all 0.2s linear 0s;
+      text-align: center;
+    }
+
+    .cta-button.effect-2:hover, .sign-in-button.effect-2:hover, .search-button.effect-2:hover, .learn-more-button.effect-2:hover {
+      text-indent: -30px;
+    }
+
+    .cta-button.effect-2:hover:before, .sign-in-button.effect-2:hover:before, .search-button.effect-2:hover:before, .learn-more-button.effect-2:hover:before {
+      right: 0;
+      text-indent: 0px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+      
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #FFD803;
+      min-width: 160px;
+      z-index: 1;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #FFD803;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #6EA4C5;
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-navbar">
+  <ul class="social-icons">
+    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+  </ul>
+</div>
+
+<div class="navbar">
+  <a href="#" class="logo">NAMRIAkbay</a>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Facilities</a>
+      <div class="dropdown-content">
+        <a href="#">Museum</a>
+        <a href="#">Photogrammetry</a>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="container">
+  <h1>Welcome to NAMRIAkbay!</h1>
+  <p>Where a Tour of Geospatial Excellence Begins.</p>
+
+  <div class="gif-container">
+    <img src="https://via.placeholder.com/800x400" class="gif" alt="Geospatial GIF">
+  </div>
+  <a href="#" class="cta-button effect-2">Get Started</a>
+  <a href="#" class="sign-in-button effect-2">Sign In</a>
+  <a href="#" class="search-button effect-2">Search</a>
+  <a href="#" class="learn-more-button effect-2">Learn More</a>
+</div>
+
+</body>
+</html>
+
+
+
