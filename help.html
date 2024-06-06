@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAMRIakbay || Help</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin-top: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+      }
+
+    .top-navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      background-color: #FFD803;
+      color: white;
+    }
+
+    .top-navbar .social-icons {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .top-navbar .social-icons li {
+      margin-left: 15px;
+    }
+
+    .top-navbar .social-icons li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.5em;
+      transition: color 0.3s;
+    }
+
+    .top-navbar .social-icons li a:hover {
+      color: #4CAF50;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #444;
+      color: white;
+      position: relative;
+    }
+
+    .navbar .logo {
+      float: to the left;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 40px; 
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2em;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #6EA4C5;
+    }
+
+    .cta-button, .sign-in-button, .search-button, .learn-more-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #6EA4C5;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      margin: 20px 10px 0;
+      position: relative;
+    }
+
+    .cta-button:hover, .sign-in-button:hover, .search-button:hover, .learn-more-button:hover {
+      background-color: #000000;
+    }
+
+    .cta-button.effect-2, .sign-in-button.effect-2, .search-button.effect-2, .learn-more-button.effect-2 {
+      transition: all 0.2s linear 0s;
+    }
+
+    .cta-button.effect-2:before, .sign-in-button.effect-2:before, .search-button.effect-2:before, .learn-more-button.effect-2:before {
+      content: "\f0a4";
+      font-family: FontAwesome;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: -30px;
+      width: 30px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 0px 5px 5px 0px;
+      transition: all 0.2s linear 0s;
+      text-align: center;
+    }
+
+    .btn-custom {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #6EA4C5;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      margin: 20px 10px 0;
+      position: relative;
+    }
+
+    .btn-custom:hover {
+      background-color: #5f93b1;
+    }
+
+    /* HELP container */
+    .help-sec {
+      background-image: url('images/landscape.png');
+      background-size: cover;
+      background-position: center;
+      background-color: #ffffff; 
+      padding: 100px; 
+      box-shadow: inset;
+    }
+
+    .info-section h1 {
+      font-size: 3em;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .info-section .icon {
+      font-size: 3em;
+      color: #6EA4C5;
+      margin-bottom: 20px;
+    }
+
+    .info-section p {
+      font-size: 1.2em;
+      color: #666;
+    }
+
+    .feature-box {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      border: 4px solid #fbfbfb;
+      border-radius: 20px;
+      transition: all 0.3s;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      color: #d8d8d8;
+    }
+
+    .feature-box:hover {
+      background-color: #fbfbfb;
+      color: #000000;
+      cursor: pointer;
+      transform: scale(1.05); 
+    }
+
+    .feature-box i {
+      font-size: 5em;
+      color: #6EA4C5;
+      margin-bottom: 20px;
+    }
+
+    .feature-box h3 {
+      font-size: 1.5em;
+      color: #1c64b1;
+      margin-bottom: 10px;
+    }
+    
+    .feature-box p {
+      font-size: 1.1em;
+      color: #666;
+      text-decoration: none;
+    }
+
+    a {
+      text-decoration: none; 
+    }
+
+    a:hover{
+      text-decoration: none;
+    }
+
+    .container i{
+      color: #f7d619;
+    }
+
+    h1{
+      font-size: 3em;
+    }
+
+    h2{
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      font-size: 3.4em;
+      text-align: center;
+    }
+
+    h4{
+      font-family:Century Gothic;
+      font-size: 2.5em;
+      text-align: center;
+      margin: 10px;
+    }
+
+    h5{
+      font-size: 1.5em;
+    }
+
+    p{
+      font-size: 1.2em;
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    hr{
+      border: none;
+      height: 3px;
+      background-color: #88aed5; 
+    }
+
+
+    span{
+      font-size: 1.4em;
+      margin: right 20px;
+      margin-top: 20px;
+    }
+
+    /*Virtual Guide Section*/
+    .virtual-tour-guide {
+      text-align: left;
+    }
+
+    .guide-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .guide-box {
+      width: 32%;
+      margin: 10px 0;
+      padding: 20px;
+      border: 2px solid #FFD803;
+      border-radius: 10px;
+      background-color: #fff8e1;
+    }
+
+    .guide-box h5 {
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 10px;
+      font-family: Century Gothic;
+      font-weight:bold;
+      text-align: left;
+    }
+
+    .guide-box p {
+      font-size: 1.2em;
+      color: #666;
+      margin: 5px 0;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .guide-box .icon {
+      font-size: 1.5em;
+      color: #FFD803;
+      margin-right: 10px;
+    }
+
+     #back-to-top {
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      background-color: #FFD803;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+      z-index: 1000;
+      font-size: 2em;
+    }
+
+    #back-to-top:hover {
+      background-color: #424242;
+      color: #fff;
+      transform:scale(1.5);
+    }
+
+     /* Start of FAQ section */
+
+     .faq-section {
+      background-color: #ffffff; 
+      padding: 50px; 
+      box-shadow: inset;
+      margin-top: 20px;
+    }
+
+    .faq {
+      margin: 20px;
+      padding: 10px;
+      background: #e5e5e5;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .faq i{ /*lightbulb icon for every answer*/
+      font-size: 2em;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+      transition: color 0.3s;
+      font-family: Century Gothic;
+    }
+
+    .faq-question i{
+      font-size: 2em;
+      margin: 15px;
+    }
+
+    .faq-question:hover {
+      color: #ffffff;
+    }
+
+    .faq-answer {
+      display: none;
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    .faq-answer a{
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+    }
+
+    .faq-answer a:hover{
+      color: #0056ac;
+    }
+
+    .faq-answer p {
+      font-size: 1.5em;
+      text-align: left;
+      text-align: justify;
+      margin-left: 0%;
+      color: #000000;
+    }
+
+    /*Contact Section CSS*/
+    .cont-section {
+      display: flex;
+      margin-bottom: 40px; 
+      padding: 50px;
+    }
+
+    .cont-info {
+      flex: 1;
+      text-align: justify; 
+      margin-left: 5px;
+    }
+
+    .cont-info a{
+      text-decoration: none;
+    }
+
+    .cont-info i{
+      font-size: 1.5em;
+      color: #FFD803;
+    }
+
+    .cont-info h5{
+      font-family: Century Gothic;
+      font-weight: bold;
+    }
+
+    .cont-info p{
+      font-size: 1.2em;
+    }
+
+    .cont-image img {
+      width: 100%; 
+      margin-bottom: 50px;
+    }
+
+    .cont-info a {
+      color: black;
+      font-weight: bold;
+    }
+
+  
+    .btn-submit{
+      background-color: #FFD803;
+      border: none;
+      border-radius: 5px;
+      padding: 5px;
+      margin-left: 80%;
+    }
+
+    .btn-submit:hover{
+      background-color:#f7e168;
+    }
+
+  /* Adjust margin-top for smaller screens */ 
+    @media (max-width: 500px) {
+      .cont-section {
+      flex-direction:column-reverse;
+    }
+    }
+    
+  </style>
+</head>
+<body>
+
+  <!--Social Media Navbar-->
+  <div class="top-navbar">
+    <ul class="social-icons">
+      <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+    </ul>
+  </div>
+
+  <!--Main Navigation Bar-->
+  <div class="navbar">
+    <a href="welcome.html" class="logo"><img src="images/landscape2.png" alt="NAMRIAkbay Logo"></a>
+    <ul class="nav-links">
+      <li><a href="lp.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </div>
+
+  <!--Help Section-->
+  <section id="help" class="help-sec">
+    <div class="container">
+      <h1>How can we support you today?</h1>
+      <p>If there's anything you need, don't hesitate to ask! We have experts on hand 
+        to assist you with any challenge. Just choose among these icons below what you're
+        looking for.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <a href="#info">
+            <div class="feature-box">
+              <i class="fas fa-map"></i>
+              <h3>Virtual Guide</h3>
+              <p>Learn how to navigate your virtual tour easily with this guide.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#faqs">
+            <div class="feature-box">
+              <i class="fas fa-question"></i>
+              <h3>FAQs</h3>
+              <p>Browse with ease and find answers to frequently asked 
+                topics in our FAQs.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#contact">
+            <div class="feature-box">
+              <i class="fas fa-comments"></i>
+              <h3>Contact Us</h3>
+              <p>Get in touch through our phone and email, for more concerns.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Virtual Button Guide Section -->
+ <section id="info" class="p-5">
+  <div class="container">
+    <h2><i class="fas fa-book"></i> Virtual Tour Guide</h2>
+    <hr>
+    <div class="virtual-tour-guide">
+      <div class="guide-section">
+        <div class="guide-box">
+          <h5><i class="fas fa-arrow-alt-circle-up icon"></i><i class="fas fa-arrow-alt-circle-down icon"></i><i class="fas fa-arrow-alt-circle-left icon"></i><i class="fas fa-arrow-alt-circle-right icon"></i>
+          Arrows</h5>
+          <p>Arrows enable users to move both vertically and horizontally during virtual environment exploration.</p>
+        </div>
+        <div class="guide-box">
+          <h5><i class="fas fa-share icon"></i>Share</h5>
+          <p>Share button allows users to share link to the virtual 
+            tour across several platforms for more accessibility.</p>
+        </div>
+        <div class="guide-box">
+          <h5><i class="fas fa-search-plus icon"></i><i class="fas fa-search-minus icon"></i>Zoom In</h5>
+          <p>Zooming buttons allow users to change the virtual tour's magnifying level,
+            for users' desired view.
+          </p>
+        </div>
+      </div>
+      <div class="guide-section">
+        <div class="guide-box">
+          <h5><i class="fas fa-info-circle icon"></i>Information Hotspot</h5>
+          <p>An interactive sign that provides multimedia material, description
+            and contextual information about specific objects.
+          </p>
+        </div>
+        <div class="guide-box">
+          <h5><i class="fas fa-bullseye icon"></i>Quick Hotspot</h5>
+          <p>Another interactive indicator as an easy access point that allows
+            users an instant location change when clicked. </p>
+        </div>
+        <div class="guide-box">
+          <h5><i class="fas fa-draw-polygon icon"></i>Polygon Hotspot</h5>
+          <p>Highlighted visual signs of specific objects that provides detailed 
+            multimedia contents.</p>
+        </div>
+        <div class="guide-box">
+          <h5><i class="fas fa-qrcode icon"></i>QR Code</h5>
+          <p>Serve as scannable code that when scanned, provides access to forms of
+            feedback about the virtual tour experience.
+          </p>
+        </div>
+        <div class="guide-box">
+          <h5><i class="fas fa-expand icon"></i>Full Screen</h5>
+          <p>This icon expands the virtual tour interface occupying the entire screen 
+            of a user for more visual and full view quality experience.</p>
+        </div>
+        <div class="guide-box">
+          <h5><i class="fas fa-vr-cardboard icon"></i>VR Mode</h5>
+          <p>An icon that activate virtual reality features, allows users to fully 
+            experience the immersive virtual tour with compatible VR devices. 
+          </p>
+        </div>
+        <div class="guide-box">
+          <h5><i class="fas fa-th-large icon"></i>Toggle Thumbnail</h5>
+          <p>This toggle the display of thumbnail previews, enables users to easily switch
+            between different scenes and locations inside the virtual world..
+          </p>
+        </div>
+        <div class="guide-box">
+          <h5><i class="fa fa-bars icon"></i>Collapsible Sidebar</h5>
+          <p>Serve as a button that may maximize screen real space by expanding to display
+             more content and collapsing to conceal it is a collapsible sidebar.
+          </p>
+        </div>
+        <div class="guide-box">
+          <h5><i class="fas fa-expand-arrows-alt icon"></i>Move Cursor</h5>
+          <p>It indicates that a piece of content may be pulled or moved in any direction
+            in the virtual tour.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--FAQ Section-->
+<section id="faqs" class="faq-section">
+  <div class="container">
+    <h2><i class="fas fa-question-circle"></i> Frequently Asked Question</h2>
+    <hr><p><br>Here are some of the most questions we received.</p>
+    <div class="faq">
+      <div class="faq-question">
+        <span>What is a 360-degree virtual tour?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <p><i class="fas fa-lightbulb"></i> Using panoramic photography, a 360-degree 
+          virtual tour is an interactive experience that lets viewers explore a place 
+          or environment from every angle. Users are able to move around the area as 
+          though they were physically there.
+        </p>
+      </div>
+    </div>
+    <div class="faq">
+      <div class="faq-question">
+        <span> How do I navigate through the virtual tour?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <p><i class="fas fa-lightbulb"></i> To navigate around the tour, use the arrow icons 
+          to go up, down, left, or right. As an alternative, you may navigate by clicking and 
+          dragging the screen or by using the arrow keys on your keyboard. <br>Also refer to the 
+          <a href="#info">Virtual Guide</a> above for more information.</p>
+      </div>
+    </div>
+    <div class="faq">
+      <div class="faq-question">
+        <span>What is VR mode and how do I activate it?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <p><i class="fas fa-lightbulb"></i> With a VR headset, you may enjoy the virtual tour 
+          in VR mode for a completely immersive experience. To enable VR mode, click the icon 
+          and follow the on-screen directions.
+        </p>
+      </div>
+    </div>
+    <div class="faq">
+      <div class="faq-question">
+        <span>What are these hotspot buttons?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <p><i class="fas fa-lightbulb"></i> An interactive component in web design, a hotspot button performs particular functions when 
+          clicked or hovered over. By making interfaces more dynamic and facilitating simple access to 
+          relevant information, it improves the user experience. Polygon hotspots draw attention to particular 
+          places, information hotspots give multimedia material, and quick hotspots allow instant access to 
+          crucial information. <br><br>Refer to the <a href="#info">Virtual Guide</a> manual above for more information.</p>
+          </div>
+        </div>
+    <div class="faq">
+      <div class="faq-question">
+        <span>How can I share the virtual tour?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <p><i class="fas fa-lightbulb"></i> By selecting the "share" icon, you may send the virtual 
+          tour to others. You may then choose to share via email, social media, or by copying the tour's 
+          website.</p>
+      </div>
+    </div>
+  </div>  
+</section>
+      
+<!--Contact Section-->
+<section id="contact" class="cont-section">
+    <div class="container">
+          <h2><i class="fas fa-comments"></i> Get In Touch</h2>
+          <hr><p>For more questions or need further assistance, feel free to contact us. We're here to help!</p>
+          <div class="cont-section">
+            <div class="cont-info">
+              <h5>Email Us</h5>
+              <p><i class="fas fa-envelope"></i> namriakbay@gmail.com</p>
+              <h5>Call Us</h5>
+              <p><i class="fas fa-phone"></i> +63 906 014 7379 or +63 2 123 4567</p>
+              <h5>Visit Our About Page</h5>
+              <p><i class="fa fa-globe"></i> Learn more about us by visiting our <a href="about.html">About Us</a> page.</p>
+            <!-- Feedback Form -->
+              <h5>Feedback</h5>
+                <form id="feedbackForm" action="submit_feedback.php" method="post">
+                <textarea name="feedback" id="feedback" class="fback" cols="60" rows="5" placeholder="Enter your feedback here."></textarea>
+                <button type="submit" class="btn-submit">Submit</button>
+              </form>
+            </div>
+            <div class="cont-image">
+              <img src="images/iconwbg.png" alt="Contact Image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="#" id="back-to-top" title="Back to Top"><i class="fas fa-arrow-alt-circle-up"></i></a>
+
+  <script>
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        const icon = item.querySelector('i');
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        } else {
+          answer.style.display = 'block';
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-up');
+        }
+      });
+    });
+
+    // Back to Top Button
+    var backToTopButton = document.getElementById("back-to-top");
+
+    window.onscroll = function() {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    }
+
+    backToTopButton.addEventListener("click", function() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+
+    // Submit Button
+    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+    // Prevent the form from submitting normally
+    event.preventDefault();
+  
+    // You can perform AJAX request here to submit the form data to the server
+  
+    // Display the popup message
+    alert("Thank you! Your feedback was sent.");
+  
+    // Optionally, you can reset the form fields after submission
+    document.getElementById("feedback").value = "";
+    });
+  </script>
+
+</body>
+</html>
