@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About NAMRIAkbay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <div class="container mt-5 pt-5">
+        <div class="video-container">
+            <div class="overlay">
+                <img src="https://media.giphy.com/media/YOUR_GIF_URL/giphy.gif" alt="Tour GIF">
+                <button onclick="startTour()">Start Tour</button>
+            </div>
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="content" id="story">
+        <h2>Our Story</h2>
+        <p>NAMRIAkbay was born out of a vision to democratize access to geospatial information. Recognizing the crucial role that accurate and up-to-date geographical data plays in various sectors—from urban planning and disaster management to environmental conservation and beyond—we embarked on a mission to create a platform that would make this data accessible and useful to all.</p>
+        <p>Since our inception, we have been committed to innovation, accuracy, and user-centric design. Our journey has been driven by a passion for leveraging technology to solve real-world problems and empower communities with the information they need to make informed decisions.</p>
+    </div>
+    <div class="content" id="team">
+        <h2>Meet the Team</h2>
+        <p>Our team is composed of dedicated professionals with a diverse range of expertise in geospatial science, data analytics, software development, and user experience design.</p>
+        <div class="team-member-container">
+            <div class="team-member">
+                <img src="images/john_doe.jpg" alt="Germaine Hartily Sumugat">
+                <div>
+                    <h3>Germaine Hartily Sumugat</h3>
+                    <p><strong>System Manager</strong></p>
+                    <p>Germaine is the visionary behind NAMRIAkbay, bringing over years of experience in geospatial technologies.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/jane_smith.jpg" alt="Jenina Velle Masangcay">
+                <div>
+                    <h3>Jenina Velle Masangcay</h3>
+                    <p><strong>UI/UX Developer</strong></p>
+                    <p>Jenina leads our technology team, ensuring that our platform remains at the forefront of innovation.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/alex_jones.jpg" alt="John Paul Total">
+                <div>
+                    <h3>John Paul Total</h3>
+                    <p><strong>Documenter</strong></p>
+                    <p>John oversees our data analytics operations, turning raw data into actionable insights.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/emily_davis.jpg" alt="Ma. Angela Maravilla">
+                <div>
+                    <h3>Ma. Angela Maravilla</h3>
+                    <p><strong>System Developer</strong></p>
+                    <p>Angela is responsible for our user interface and experience, ensuring a seamless interaction for our users.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <p></p>
+            <p><span class="glyphicon glyphicon-map-marker"></span>Metro Manila, Philippines</p>
+            <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>Email: yume@mail.com</p>
+        </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-sm-6">
+                    <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Name"
+                        required>
+                    <div class="invalid-feedback">
+                        Please fill up your name.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                        <input type="text" class="form-control is-invalid" id="validationServerUsername"
+                            placeholder="Email"
+                            aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                            Please enter your username.
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <textarea class="form-control is-invalid" id="validationTextarea"
+                    placeholder="write your message here" required rows="5"></textarea>
+                <div class="invalid-feedback">
+                    Please enter a message.
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+    <footer class="footer bg-dark py-3">
+        <div class="container text-center text-white">
+            <p class="mb-0">© 2023 NAMRIAkbay. All Rights Reserved.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
